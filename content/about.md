@@ -1,7 +1,7 @@
-+++
-title = "关于"
-date = 2026-11-24T22:00:00+08:00
-draft = false
+---
+title: "关于"
+date: 2026-11-24T22:00:00+08:00
+draft: false
 ---
 
 我是 Sherl，对 LLM 应用、RAG 系统和小模型训练感兴趣。
