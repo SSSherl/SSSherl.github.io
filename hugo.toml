@@ -1,0 +1,35 @@
+baseURL = "https://sssherl.github.io/"
+languageCode = "zh-cn"
+defaultContentLanguage = "zh-cn"
+title = "Sherl 的博客"
+theme = "PaperMod"
+pagination.pagerSize = 10
+enableRobotsTXT = true
+
+[params]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  description = "记录学习、技术与思考"
+
+  [params.homeInfoParams]
+    Title = "你好，我是 Sherl 👋"
+    Content = "欢迎来到我的博客。这里记录我在 LLM / RAG / 工程实践路上的学习笔记与思考。"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/SSSherl"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup.highlight]
+  style = "dracula"
+  lineNos = true
+  codeFences = true
+
+[markup.goldmark.renderer]
+  unsafe = true
