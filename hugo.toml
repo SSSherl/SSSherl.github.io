@@ -5,19 +5,27 @@ title = "Sherl 的博客"
 theme = "PaperMod"
 pagination.pagerSize = 10
 enableRobotsTXT = true
+enableEmoji = true
+enableGitInfo = true
 
 [params]
   defaultTheme = "auto"
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
-  ShowBreadCrumbs = true
+  ShowBreadCrumbs = false
   ShowCodeCopyButtons = true
-  description = "记录学习、技术与思考"
+  ShowToc = true
+  TocOpen = false
+  description = "LLM / Agent / RAG 的工程笔记"
+  displayLastMod = true
 
   [params.homeInfoParams]
-    Title = "你好，我是 Sherl 👋"
-    Content = "欢迎来到我的博客。这里记录我在 LLM / RAG / 工程实践路上的学习笔记与思考。"
+    Title = "你好，我是 Sherl"
+    Content = "LLM 应用、Agent 工程、RAG 与小模型训练的学习笔记。读源码、做项目、写清楚为什么。"
+
+  [params.footer]
+    text = "仅供学习交流 · 转载请署名"
 
   [[params.socialIcons]]
     name = "github"
@@ -26,10 +34,33 @@ enableRobotsTXT = true
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
+[[menu.main]]
+  identifier = "posts"
+  name = "文章"
+  url = "/posts/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "archives"
+  name = "归档"
+  url = "/archives/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "about"
+  name = "关于"
+  url = "/about/"
+  weight = 30
+
 [markup.highlight]
-  style = "dracula"
-  lineNos = true
+  style = "github-dark"
+  lineNos = false
   codeFences = true
+  noClasses = false
 
 [markup.goldmark.renderer]
   unsafe = true
+
+[markup.goldmark.parser.attribute]
+  block = true
+  title = true

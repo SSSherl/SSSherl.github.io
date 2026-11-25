@@ -8,6 +8,6 @@ draft: false
 
 - GitHub：[SSSherl](https://github.com/SSSherl)
 - 主要项目：[DocQA](https://github.com/SSSherl/DocQA)（本地多模态文档问答）、[Sherl_miniMind](https://github.com/SSSherl/Sherl_miniMind)（从零训练小型语言模型）
-- 正在学习：Agent 架构（从读 [doge-code](https://github.com/HELPMEEADICE/doge-code) 开始）、协议转接、工具调用
+- 正在做的事：读 Claude Code 的源码还原项目，搞清楚 Agent 主循环、工具调度和上下文管理这些工程设计
 
-这个博客用于沉淀学习笔记、项目复盘和随想。
+这个博客用于沉淀学习笔记、项目复盘和随想。写技术文章的原则：讲人话，把机制讲清楚，不堆术语。

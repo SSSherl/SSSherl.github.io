@@ -1,0 +1,32 @@
+{{- /* 渲染文章里的 ```mermaid 代码块（PaperMod 原生不带 mermaid） */ -}}
+{{- $hasMermaid := and .IsPage (strings.Contains .RawContent "```mermaid") }}
+{{- if $hasMermaid }}
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: document.documentElement.dataset.theme === 'dark' ? 'dark' : 'neutral',
+    flowchart: { curve: 'basis', htmlLabels: true },
+    fontFamily: 'inherit',
+  });
+
+  // Chroma 把 ```mermaid 输出成 <pre><code class="language-mermaid">，
+  // 转成 mermaid 期望的 <div class="mermaid"> 再统一渲染。
+  const blocks = [...document.querySelectorAll('code.language-mermaid')];
+  for (const code of blocks) {
+    const holder = document.createElement('div');
+    holder.className = 'mermaid';
+    holder.textContent = code.textContent;
+    const pre = code.closest('pre');
+    if (pre) {
+      pre.replaceWith(holder);
+    } else {
+      code.replaceWith(holder);
+    }
+  }
+  if (blocks.length) {
+    await mermaid.run({ querySelector: '.mermaid' });
+  }
+</script>
+{{- end }}
