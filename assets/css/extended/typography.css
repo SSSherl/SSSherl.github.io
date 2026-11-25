@@ -14,8 +14,9 @@
   --accent: #3b6ea5;
   --accent-strong: #2d5a8a;
 
-  /* 中文正文字体栈：系统中文字体优先，避免宋体/雅黑混排突兀 */
-  --font-cn: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+  /* 中英混排：拉丁字符走西文字体，中文回退到系统中文字体栈 */
+  --font-cn: -apple-system, "Segoe UI", "Helvetica Neue", Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
     "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
   --font-mono: "JetBrains Mono", "Cascadia Code", "SF Mono", Consolas,
     "Liberation Mono", Menlo, monospace;

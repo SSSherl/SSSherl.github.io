@@ -53,7 +53,7 @@ enableGitInfo = true
   weight = 30
 
 [markup.highlight]
-  style = "github-dark"
+  # PaperMod 自带 chroma 色板（noClasses=false 时生效），style 项由主题内置样式接管
   lineNos = false
   codeFences = true
   noClasses = false
